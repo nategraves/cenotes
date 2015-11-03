@@ -103,12 +103,12 @@
 					}
 
 					if (cursors.up.isDown) {
-                        if (swimmer.body.velocity.x < maxSpeed) {
-                            swimmer.body.velocity.y -= 1;
+                        if (swimmer.body.velocity.y < maxSpeed) {
+                            swimmer.body.velocity.y -= 4;
                         }
 					} else if (cursors.down.isDown) {
-                        if (swimmer.body.velocity.x < maxSpeed) {
-                            swimmer.body.velocity.y += 4;
+                        if (swimmer.body.velocity.y < maxSpeed) {
+                            swimmer.body.velocity.y += 1;
                             swimmer.health -= 1;
                         }
 					}
