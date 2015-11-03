@@ -15,7 +15,8 @@
 				game = new Phaser.Game(800, 600, Phaser.CANVAS, 'game', {
 					preload: preload,
 					create: create,
-					render: render
+                    render: render,
+                    update: update
 				});
 
 				function preload() {
@@ -111,8 +112,12 @@
                             swimmer.health -= 1;
                         }
 					}
-                    text.text = (swimmer.health / 10) + "%";
+                    text.text = parseInt(swimmer.health / 10) + "%";
 				}
+
+                function update() {
+                    swimmer.health -= 1/15;
+                }
 
 				function collisionHandler() {
 					swimmer.body.moveUp(0);
